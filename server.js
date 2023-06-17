@@ -7,7 +7,7 @@ const User = require('./models/User');
 
 require('dotenv').config(); 
 
-mongoose.connect(`mongodb://${process.env.MONGODB_HOST}/${process.env.DB_NAME}`)
+mongoose.connect(process.env.MONGO_URL)
 
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
