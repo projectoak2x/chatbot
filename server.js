@@ -20,7 +20,7 @@ app.use(bodyParser.json());
 
 app.post('/webhook', async (req, res) => {
   let body = req.body;
-  console.log(body);
+  console.log(JSON.stringify(body));
   if (body.object === "page") {
     // Returns a '200 OK' response to all requests
     res.status(200).send("EVENT_RECEIVED");
